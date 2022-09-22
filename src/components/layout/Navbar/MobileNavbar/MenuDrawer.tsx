@@ -18,9 +18,9 @@ const MenuDrawer: React.FC = () => {
           : 'w-0 opacity-0 translate-x-full'
       )}
     >
-      <div className='container my-4 '>
+      <div className='mx-[2rem] my-4 '>
         <button
-          className='block ml-auto bg-transparent p-0 shadow-none text-[3rem]'
+          className='block ml-auto bg-transparent p-0 shadow-none text-[4rem]'
           onClick={() => dispatch(expandMenuReducer())}
         >
           X
@@ -31,15 +31,13 @@ const MenuDrawer: React.FC = () => {
             <img src='https://res.cloudinary.com/softenin/image/upload/v1663310137/nuren/logo_stuvqc.png' alt='Brand Logo' />
           </Link>
 
-          <div className=' mt-8 flex flex-col gap-y-[28px] '>
+          <div className=' mt-28 flex flex-col gap-y-[28px]'>
             {data.map((item, index) => {
-              return item.type === 'link' ? (
+              return(
                 <Link key={index} href={item.href}>
-                  {item.title}
+                  <a className='text-[14px]' href="">{item.title}</a>
                 </Link>
-              ) : (
-                <button className='w-max'>{item.title}</button>
-              );
+              )
             })}
           </div>
         </div>

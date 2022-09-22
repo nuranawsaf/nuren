@@ -9,8 +9,8 @@ const MobileNavbar: React.FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <nav className='block lg:hidden  py-4 relative'>
-      <div className='container  flex items-center justify-between'>
+    <nav className='block lg:hidden  py-6 relative'>
+      <div className='mx-[2rem] flex items-center justify-between'>
         <div>
           <Link href='/'>
             <img className='w-[80%]' src='https://res.cloudinary.com/softenin/image/upload/v1663310137/nuren/logo_stuvqc.png' alt='Brand Logo' />

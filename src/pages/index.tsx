@@ -1,11 +1,15 @@
 import HeroBanner from "../components/home/hero/HeroBanner";
-import List from "../components/home/list/List";
+import ClientList from "../components/home/list/ClientList";
+import Portfolio from "../components/home/portfolio/Portfolio";
+import Testimonial from "../components/home/testimonial/Testimonial";
 
 export default function Home() {
   return (
     <div className="">
         <HeroBanner/>
-        <List/>
+        <ClientList/>
+        <Portfolio/>
+        <Testimonial/>
     </div>
   );
 }

@@ -12,9 +12,11 @@ module.exports = {
         tertiary: "#ED1C3D",
         white_orange: "#F5F2EF",
         black: "#07031F",
-        custom: "#16B3CB",
+        custom: "#1B9DB1",
         light_black: "#202933",
         dark_gray: "#2C3742",
+        custom1: '#106981',
+        custom: '#16B3CB',
       },
       letterSpacing: {
         widest: '1.06em',

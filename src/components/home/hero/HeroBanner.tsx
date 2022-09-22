@@ -5,15 +5,15 @@ const HeroBanner = () => {
 
   const icons = [
     {
-      icon: "/icons/facebook.png",
+      icon: "/assests/icons/facebook.png",
       href: "https://www.facebook.com/nurenawsaf/"
     },
     {
-      icon: "/icons/twitter.png",
+      icon: "/assests/icons/twitter.png",
       href: "https://twitter.com/NuranAwsaf"
     },
     {
-      icon: "/icons/linkedin.png",
+      icon: "/assests/icons/linkedin.png",
       href: "https://www.linkedin.com/in/nuran-awsaf-b1428a13a/"
     },
     
@@ -24,7 +24,7 @@ const HeroBanner = () => {
           <div className="lg:grid lg:grid-cols-2  ">
                   <div className='py-52 lg:py-[167px] '>
                         <p className='text-custom text-[13px] md:text-[18px] tracking-wider lg:tracking-widest'>WELCOME TO MY WORLD</p>
-                        <h1 className='text-[28px] md:text-[60px]'>Hi, I’m <span className='text-custom'>Nuren Awsaf</span></h1>
+                        <h1>Hi, I’m <span className='text-custom'>Nuren Awsaf</span></h1>
                         <h4 className='lg:text-[24px]'>A DEVELOPER.</h4>
                         <p className='mt-[26px] text-[13px] md:text-[16px] text-justify lg:text-left leading-loose lg:w-[68%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
                         <div className='mt-8 md:mt-52'>
@@ -45,7 +45,7 @@ const HeroBanner = () => {
 
                   <div className=' lg:flex lg:justify-end '>
                         <div className=' lg:w-[75%] '>
-                              <img src="/image/hero-pic-min.png" alt="" />
+                              <img src="/assests/image/hero-pic-min.png" alt="" />
                         </div>
                   </div>
           </div>

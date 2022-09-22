@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  @apply text-[8rem] font-poppins  font-semibold;
+  @apply text-[28px] md:text-[60px] font-poppins  font-semibold;
 }
 h2 {
   @apply text-[6rem] font-poppins font-bold ;
@@ -23,7 +23,7 @@ h4 {
   @apply text-[3rem] font-poppins  ;
 }
 p {
-  @apply text-[16px] md:text-[2.4rem] text-white/80 font-inter leading-[3.6rem];
+  @apply text-[13px] md:text-[16px] text-white/80 font-inter leading-[3.6rem];
 }
 .p_small {
   @apply text-[1.8rem] font-inter leading-[3.0rem];
@@ -46,4 +46,13 @@ button {
     @apply px-[10rem];
   }
 
+  .wrapper {
+    @apply mx-[2rem] lg:mx-[20rem] 
+  }
+
 @import "tailwindcss/utilities";
+
+.footerIcon{
+    font-size: 27px;
+    color: #106981;
+  }

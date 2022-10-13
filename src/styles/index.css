@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  @apply text-[28px] md:text-[60px] font-poppins  font-semibold;
+  @apply text-[28px] lg:text-[40px] 2xl:text-[60px] font-poppins  font-semibold;
 }
 h2 {
   @apply text-[6rem] font-poppins font-bold ;
@@ -21,6 +21,9 @@ h3 {
 }
 h4 {
   @apply text-[3rem] font-poppins  ;
+}
+h5 {
+  @apply text-[17px] font-poppins  ;
 }
 p {
   @apply text-[13px] md:text-[16px] text-white/80 font-inter leading-[3.6rem];
@@ -47,7 +50,7 @@ button {
   }
 
   .wrapper {
-    @apply mx-[2rem] lg:mx-[20rem] 
+    @apply px-[2rem] lg:px-[10rem] 2xl:px-[20rem] 
   }
 
 @import "tailwindcss/utilities";
@@ -55,4 +58,120 @@ button {
 .footerIcon{
     font-size: 27px;
     color: #106981;
+  }
+
+  .skill{
+    position: relative;
+  }
+
+  .outer{
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.1)
+  }
+
+  .inner{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -0.5px 1.5px 0px #127F97,
+                -0.5px -0.5px 0px #127F97,
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+
+  }
+
+  #number{
+    font-weight: 600px;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  circle{
+    fill: none;
+    box-shadow: inset -1px 2px 1px #16B3CB;
+    stroke: url(#GradientColor);
+    stroke-width: 14px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 1s ease-out forwards;
+  }
+
+  .circle2{
+    fill: none;
+    box-shadow: inset -1px 2px 1px #16B3CB;
+    stroke: url(#GradientColor);
+    stroke-width: 14px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim2 1s ease-out forwards;
+  }
+
+  .circle3{
+    fill: none;
+    box-shadow: inset -1px 2px 1px #16B3CB;
+    stroke: url(#GradientColor);
+    stroke-width: 14px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim3 1s ease-out forwards;
+  }
+
+  
+
+  .circle-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @keyframes anim{
+    100%{
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes anim2{
+    100%{
+      stroke-dashoffset: 190;
+    }
+  }
+
+  @keyframes anim3{
+    100%{
+      stroke-dashoffset: 250;
+    }
+  }
+
+
+  #triangle {
+    background: linear-gradient(180deg, #16B3CB 0%, #106981 100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    width: 100px;
+    height: 100px;
+  }
+
+
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
   }

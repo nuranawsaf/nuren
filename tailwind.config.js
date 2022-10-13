@@ -19,6 +19,8 @@ module.exports = {
         custom: '#16B3CB',
       },
       letterSpacing: {
+        wide: '0.21em',
+        wider: '0.55em',
         widest: '1.06em',
       },
       fontFamily: {

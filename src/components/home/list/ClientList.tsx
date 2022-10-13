@@ -22,18 +22,18 @@ const ClientList = () => {
 
   return (
     <div className='wrapper my-60 md:my-[115px]'>
-      <div className=' flex justify-between'>
+      <div className=' lg:flex justify-between  '>
         {clientData.map((item) => {
-          return <div>
-              <div className=' flex items-center gap-2 mx-3 md:mx-0  md:gap-24'>
+          return <div className=' mb-16 lg:mb-0 '>
+              <div className=' flex items-center gap-12 mx-3 md:mx-0  md:gap-24'>
 
-                <div className=' bg-dark_gray rounded-full p-2 md:p-8'>
+                <div className=' bg-dark_gray rounded-full p-2 md:p-8 '>
                   <img src={item.pic} alt="" />
                 </div>
 
                 <div className=''>
-                  <h3 className='md:text-[36px] font-semibold'>{item.title}</h3>
-                  <h5 className='md:text-[18px] font-normal'>{item.des}</h5>
+                  <h3 className='text-[28px] lg:text-[36px] font-semibold'>{item.title}</h3>
+                  <h5 className='lg:text-[18px] font-normal'>{item.des}</h5>
                 </div>
 
               </div>

@@ -26,7 +26,7 @@ const HeroBanner = () => {
                   <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 1.5, duration: 1.5 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
                   className='py-52 2xl:py-[167px]  '>
                         <p className='text-custom text-[13px] md:text-[18px] tracking-wide lg:tracking-wider 2xl:tracking-widest'>WELCOME TO MY WORLD</p>
                         <h1>Hi, I’m <motion.span animate={{ color: '#1B9DB1', }} className='text-white ' >Nuren Awsaf</motion.span></h1>
@@ -57,9 +57,26 @@ const HeroBanner = () => {
                     </motion.div>
 
                   <div className=' lg:flex lg:justify-end lg:items-end'>
-                        <div className=' lg:w-[75%] '>
+                        <motion.div 
+                          className=' lg:w-[75%]'
+                          initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                              default: {
+                                delay: 0.2,
+                                duration: 0.5,
+                                ease: [0, 0.71, 0.2, 1.01]
+                              },
+                              scale: {
+                                type: "spring",
+                                damping: 5,
+                                stiffness: 100,
+                                restDelta: 0.001
+                              }
+                            }}
+                        >
                               <img src="/assests/image/hero-pic-min.png" alt="" />
-                        </div>
+                        </motion.div>
                   </div>
           </div>
         </div>

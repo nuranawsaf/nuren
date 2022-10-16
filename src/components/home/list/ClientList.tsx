@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, useTime, useTransform } from "framer-motion";
 
 const ClientList = () => {
 
@@ -24,12 +25,16 @@ const ClientList = () => {
     <div className='wrapper my-60 md:my-[115px]'>
       <div className=' lg:flex justify-between  '>
         {clientData.map((item) => {
+          
+          const time = useTime();
+          const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
+
           return <div className=' mb-16 lg:mb-0 '>
               <div className=' flex items-center gap-12 mx-3 md:mx-0  md:gap-24'>
 
-                <div className=' bg-dark_gray rounded-full p-2 md:p-8 '>
+                <motion.div style={{ rotate }} className=' bg-dark_gray rounded-full p-2 md:p-8 '>
                   <img src={item.pic} alt="" />
-                </div>
+                </motion.div>
 
                 <div className=''>
                   <h3 className='text-[28px] lg:text-[36px] font-semibold'>{item.title}</h3>

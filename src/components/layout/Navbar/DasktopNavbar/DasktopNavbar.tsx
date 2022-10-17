@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
-import { navdata as data } from '../navdata';
+import { links } from '../navdata';
 import { useRouter } from 'next/router'
 
 const DasktopNavbar = () => {
@@ -17,16 +17,14 @@ const DasktopNavbar = () => {
         </div>
 
         <div className='flex items-center gap-36  '>
-          {data.map((item, index) => {
-            return item.type === 'link' ? (
-              <Link  key={index} href={item.href}>
-                <a className={`${active === index ? "text-custom text-[3.2rem]" : "white"}`} onClick={()=> setActive(index)} href="">
-                      {item.title}
+          {links.map((link) => {
+            return (
+              <Link  key={link.id} href={link.href}>
+                <a  href="">
+                      {link.title}
                 </a>
               </Link>
-            ) : (
-              <button> {item.title}</button>
-            );
+            )
           })}
         </div>
       </div>

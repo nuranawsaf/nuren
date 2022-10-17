@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useInView } from "react-intersection-observer";
 
 const HeroBanner = () => {
 
@@ -20,17 +21,82 @@ const HeroBanner = () => {
     
   ]
 
+  const { ref, inView } = useInView({ threshold: 0.5 });
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      duration: 2,
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        type: "spring",
+        bounce: 1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0
+    }
+  };
+
   return (
         <div className='bg-dark_gray wrapper'>
           <div className="grid lg:grid-cols-2  ">
                   <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
                   className='py-52 2xl:py-[167px]  '>
                         <p className='text-custom text-[13px] md:text-[18px] tracking-wide lg:tracking-wider 2xl:tracking-widest'>WELCOME TO MY WORLD</p>
-                        <h1>Hi, I’m <motion.span animate={{ color: '#1B9DB1', }} className='text-white ' >Nuren Awsaf</motion.span></h1>
-                        <h4 className='2xl:text-[24px] tracking-wide'>A DEVELOPER.</h4>
+                        <motion.h1  
+                        ref={ref}
+                        initial="hidden"
+                        animate={inView ? "show" : "hidden"}
+                        exit="hidden"
+                        variants={container}
+                        data-splitting=""
+                        >
+                          Hi, I’m 
+                          
+                          <motion.span variants={item} className="char text-custom" data-char="N"> N</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="u">u</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="r">r</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="e">e</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="n">n</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="A"> A</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="w">w</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="s">s</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="a">a</motion.span>
+                          <motion.span variants={item} className="char text-custom" data-char="f">f</motion.span>
+
+                        </motion.h1>
+
+
+                        <motion.h4 
+                        className='2xl:text-[24px] tracking-wide'
+                        ref={ref}
+                        initial="hidden"
+                        animate={inView ? "show" : "hidden"}
+                        exit="hidden"
+                        variants={container}
+                        data-splitting=""
+                        >
+                          <motion.span variants={item} className="char " data-char="A">A</motion.span>
+                          <motion.span variants={item} className="char " data-char="D"> D</motion.span>
+                          <motion.span variants={item} className="char " data-char="E">E</motion.span>
+                          <motion.span variants={item} className="char " data-char="V">V</motion.span>
+                          <motion.span variants={item} className="char " data-char="E">E</motion.span>
+                          <motion.span variants={item} className="char " data-char="L">L</motion.span>
+                          <motion.span variants={item} className="char " data-char="O">O</motion.span>
+                          <motion.span variants={item} className="char " data-char="P">P</motion.span>
+                          <motion.span variants={item} className="char " data-char="E">E</motion.span>
+                          <motion.span variants={item} className="char " data-char="R">R</motion.span>
+
+                        </motion.h4>
+
+
                         <p className='mt-[26px] text-[13px] md:text-[16px] text-justify 2xl:text-left leading-loose lg:w-[98%] 2xl:w-[68%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
                         <div className='mt-8 md:mt-52'>
                               <h4 className='text-[18px]'>FIND WITH ME</h4>
